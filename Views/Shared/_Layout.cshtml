@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication11</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication11.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+       <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/Logo 1.png" width="100">
+            </div>
+            <nav>
+                
+                <ul>
+                    <li><a asp-action="Index">Home</a></li>
+                    <li><a asp-action="shop">shop</a></li>
+                    <li><a asp-action="About">About</a></li>
+                    <li><a asp-action="Contact">Contact</a></li>
+                    
+                </ul>
+               <!--<partial name="_loginPartial"/>--> 
+            </nav>
+            <i class="fa fa-shopping-cart fa-3x" style="color:#ff523b ;"></i>
+            <partial name="_loginPartial"/>
+        </div>
+<!--Landing Image-->
+        <div class="row">
+            <div class="col-2">
+                <h1>Give your Workout  <br>A  new Style </h1>
+                <p>Success is not always about Greatness. It's about consistency. Consistent <br> hard work gain Success. 
+                    Greatness will come.</p>
+                    <a href="Shop.html" class="btn"> Explore Now &#8594;</a>
+            </div>
+            <div class="col-2">
+                <img src="images/Image 1.png" alt="">
+            </div>
+        </div>
+        
+    </div>
+</div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
